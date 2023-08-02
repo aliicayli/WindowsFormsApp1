@@ -43,9 +43,8 @@ namespace WindowsFormsApp1
                     if (resultt == DialogResult.OK)
                     {
                         FileStream fs = new FileStream(saveFileDialog.FileName, FileMode.Create, FileAccess.ReadWrite);
-                        gridDesktop1.ExportExcelFile(fs);
+                        gridDesktop1.ExportExcelFile(fs,Aspose.Cells.GridDesktop.FileFormatType.Excel2007Xlsx);
                         fs.Close();
-                        System.Windows.MessageBox.Show(saveFileDialog.FileName);
                     }
                     break;
                 case MessageBoxResult.No:
